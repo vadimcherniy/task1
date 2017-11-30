@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         try {
-            System.out.println("Enter the directory with files:" );
+            System.out.println("\nEnter the directory with files:" );
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String path = reader.readLine();
 
