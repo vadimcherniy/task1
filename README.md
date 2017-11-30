@@ -1,1 +1,1 @@
-# task1
+A program that have 3 asynk threads (Providers) and one (Worker)  thread in addition to the Main. All threads works with I/O streams; providers reads the file using InputStream and transmits data to Main. Main connects each OutputStream from Providers to the InputStream Worker. Worker reads data and generates hash (e.g. SHA256) for each file and returns it back to Main every time, that hash was generated; main after receiving hash from worker, transmits it to the right Providerprovider after receiving a hash adds it to the end of the file.
