@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Objects;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -56,7 +57,7 @@ public class ProviderService {
                 e.printStackTrace();
             }
         }
-        workerResultList.forEach(this::saveContentToFile);
+        workerResultList.stream().filter(Objects::nonNull).forEach(this::saveContentToFile);
     }
 
     /**
